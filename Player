@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Game{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("What is your name?");
+    String name1 = sc.nextLine();
+    Player p1 = new Player(name1);
+    System.out.println("Boss : " + name1 + " you were agood a good worker, i am sad you are leaving the company. Good luck on beacoming a monk.");
+    
+    int 
+    while(player < 100) {
+      System.out.println("You have %d and %d Zen points %n"
+                        + "What would you like to do? %n"
+                        + "Meditate %d %n"):
+  }
+}
