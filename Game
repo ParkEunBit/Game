@@ -5,7 +5,7 @@ public class Game{
     System.out.println("What is your name?");
     String name1 = sc.nextLine();
     Player p1 = new Player(name1);
-    System.out.println("Boss : " + name1 + " you were agood a good worker, i am sad you are leaving the company. Good luck on beacoming a monk.");
+    System.out.println("Boss : " + name1 + " you were a good worker, I am sad you are leaving the company. Good luck on becoming a monk.");
     
     int 
     while(player < 100) {
@@ -13,4 +13,8 @@ public class Game{
                         + "What would you like to do? %n"
                         + "Meditate %d %n"):
   }
-
+    if(zen > 100){
+      System.out.println("" + "" + count);
+    }
+  }
+}
