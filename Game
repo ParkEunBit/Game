@@ -13,8 +13,4 @@ public class Game{
                         + "What would you like to do? %n"
                         + "Meditate %d %n"):
   }
-    if(zen > 100){
-      System.out.println("" + "" + count);
-    }
-  }
-}
+
