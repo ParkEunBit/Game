@@ -10,18 +10,27 @@ public class Game{
     //set loop
     int zen = 0;
     int count = 0;
+    int budd;
+    
     while(zen < 100) {
       count ++ ;
-      System.out.println("You have %d and %d Zen points %n"
+      System.out.println("You have %d and %d Zen points "
                         + "What would you like to do? %n"
                         + "Meditate 0$, +1 Zen -> Press 1 %n"
                         + "Help Someone -10$, +5 Zen -> Press 2 %n"
                         + "Work at Company +$50, -30 Zen -> Press 3 %n"
                         + "Purchase Temple -> Press 4 %n");
+      Scanner bu = new Scanner(System.in);
+      budd = bu.nextInt();
+      if(budd == 1){
+        int zen1 = 1;
+        zen = zen + zen1;
+      }
+
     }
     if(zen > 100){
       System.out.println("" + "" + count);
     }
-     
+
   }
 }
