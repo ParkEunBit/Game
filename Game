@@ -7,14 +7,21 @@ public class Game{
     Player p1 = new Player(name1);
     System.out.println("Boss : " + name1 + " you were a good worker, I am sad you are leaving the company. Good luck on becoming a monk.");
     
-    int 
-    while(player < 100) {
+    //set loop
+    int zen = 0;
+    int count = 0;
+    while(zen < 100) {
+      count ++ ;
       System.out.println("You have %d and %d Zen points %n"
                         + "What would you like to do? %n"
-                        + "Meditate %d %n"):
-  }
+                        + "Meditate 0$, +1 Zen -> Press 1 %n"
+                        + "Help Someone -10$, +5 Zen -> Press 2 %n"
+                        + "Work at Company +$50, -30 Zen -> Press 3 %n"
+                        + "Purchase Temple -> Press 4 %n");
+    }
     if(zen > 100){
       System.out.println("" + "" + count);
     }
+     
   }
 }
