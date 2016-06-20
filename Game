@@ -82,7 +82,7 @@ public class Game{
     System.out.println("Done collecting from temples...");
     System.out.println(" ");
     
-    if(zen > 100){
+    if(zen >= 100){
       System.out.println("Congrats, you became a master monk in " + count + " turn.");
     }
     
