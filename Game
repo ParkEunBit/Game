@@ -6,7 +6,6 @@ public class Game{
     String name1 = sc.nextLine();
     Player p1 = new Player(name1);
     System.out.println("Boss : " + name1 + " you were a good worker, I am sad you are leaving the company. Good luck on becoming a monk.");
-    
     //set loop
     int money = 100;
     int zen = 0;
@@ -14,6 +13,7 @@ public class Game{
     int budd;
     while(zen < 100) {
       count ++ ;
+      System.out.println(" ");
       System.out.println("What would you like to do?");
       System.out.println("Meditate 0$, +1 Zen -> Press 1");
       System.out.println("Help Someone -10$, +5 Zen -> Press 2");
@@ -43,17 +43,35 @@ public class Game{
         System.out.println("What do you want to call your temple?");
         Scanner gb = new Scanner(System.in);
         String temple_name = gb.nextLine();
-        System.out.println("A big temple generates " + money + " and " + zen + " each turn.");
+        System.out.println("A big temple generates " + money + " and " + zen + " zen each turn.");
         System.out.println("A small temple generates " + zen + " zen each turn.");
         System.out.println("Do you want a big (-$70, press 1) or small (-$30, press 2) temple?");
       }
       if(budd == 5){
-        
+        Scanner cr = new Scanner(System.in);
+        int choice = cr.nextInt();
+        if(choice == 1) {
+          int big_temple = -70;
+          money = money - big_temple;
+        }
+        if(choice == 2) {
+          int small_temple = -30;
+          money = money - small_temple;
+        }
+        System.out.println("Collecting from all temples...");
+        System.out.println("Collecting 3 Zen from");
+        System.out.println("Collecting 3 Zen from a");
+        System.out.println("Collecting " + money + " and " + zen + " Zen from a");
+        System.out.println("Done collecting from temples...");
+        System.out.println(" ");
       }
     }
     if(zen > 100){
       System.out.println("Congrats, you became a master monk in " + count + " turn.");
     }
-
+    if(money < 0){
+      System.out.println("You ran out of money before becoming a master in " + count + " turns");
+      System.out.println("Your final rank was : newcomer");
+    }
   }
 }
