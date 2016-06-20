@@ -6,7 +6,7 @@ public class Game{
     String name1 = sc.nextLine();
     Player p1 = new Player(name1);
     System.out.println("Boss : " + name1 + " you were a good worker, I am sad you are leaving the company. Good luck on becoming a monk.");
-    //set loop
+   
     int money = 100;
     int zen = 0;
     int count = 0;
