@@ -1,13 +1,13 @@
 import java.util.Scanner;
 public class Game{
-
+  
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     System.out.println("What is your name?");
     String name1 = sc.nextLine();
     Player p1 = new Player(name1);
     System.out.println("Boss : " + name1 + " you were a good worker, I am sad you are leaving the company. Good luck on becoming a monk.");
-   
+    
     int money = 100;
     int zen = 0;
     int count = 0;
@@ -23,7 +23,7 @@ public class Game{
       System.out.println("Purchase Temple -> Press 4");
       System.out.println("Write a book -> Press 5");
       System.out.println(" ");
-      System.out.println("You have $" + money + " and " + zen + " points");
+      System.out.println("You have $" + money + " and " + zen + " Zen points");
       Scanner bu = new Scanner(System.in);
       budd = bu.nextInt();
       
@@ -55,19 +55,27 @@ public class Game{
         System.out.println("Do you want a big (-$70, press 1) or small (-$30, press 2) temple?");
         Scanner da = new Scanner(System.in);
         int select = da.nextInt();
-        if(select == 1){
+          if(select == 1){
           int big_temple = -70;
           money = money + big_temple;
           int money4_big = +15;
           int zen4_big = +5;
           money = money + money4_big;
           zen = zen + zen4_big;
+          System.out.println("Collecting from all temples...");
+          System.out.println("Collecting $15 and 5 Zen from");
+          System.out.println("Done collecting from temples...");
+          System.out.println(" ");
         }
         if(select == 2){
           int small_temple = -30;
           money = money + small_temple;
           int zen4_small = +3;
           zen = zen + zen4_small;
+          System.out.println("Collecting from all temples...");
+          System.out.println("Collecting 3 Zen from");
+          System.out.println("Done collecting from temples...");
+          System.out.println(" ");
         }
       }
       
@@ -79,16 +87,11 @@ public class Game{
       }
     }
     
-    System.out.println("Collecting from all temples...");
-    System.out.println("Collecting " + money + " and " + zen + " Zen from a");
-    System.out.println("Done collecting from temples...");
-    System.out.println(" ");
-    
-    if(zen >= 100){
+    if(zen > 100){
       System.out.println("Congrats, you became a master monk in " + count + " turn.");
     }
     
-    if(money < 0){
+    if(money <= 0){
       System.out.println("You ran out of money before becoming a master in " + count + " turns");
       System.out.println("Your final rank was : newcomer");
     }
