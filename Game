@@ -43,29 +43,34 @@ public class Game{
         System.out.println("What do you want to call your temple?");
         Scanner gb = new Scanner(System.in);
         String temple_name = gb.nextLine();
-        System.out.println("A big temple generates " + money + " and " + zen + " zen each turn.");
-        System.out.println("A small temple generates " + zen + " zen each turn.");
+        System.out.println("A big temple generates $15 and 5 zen each turn.");
+        System.out.println("A small temple generates 3 zen each turn.");
         System.out.println("Do you want a big (-$70, press 1) or small (-$30, press 2) temple?");
+        Scanner da = new Scanner(System.in);
+        int choice = da.nextInt();
+        if(choice == 1){
+          int big_temple = -70;
+          money = money + big_temple;
+          int money4_big = +15;
+          int zen4_big = +5;
+          money = money + money4_big;
+          zen = zen + zen4_big;
+        }
+        if(choice == 2){
+          int small_temple = -30;
+          money = money + small_temple;
+          int zen4_small = +3;
+          zen = zen + zen4_small;
+        }
       }
       if(budd == 5){
-        Scanner cr = new Scanner(System.in);
-        int choice = cr.nextInt();
-        if(choice == 1) {
-          int big_temple = -70;
-          money = money - big_temple;
-        }
-        if(choice == 2) {
-          int small_temple = -30;
-          money = money - small_temple;
-        }
-        System.out.println("Collecting from all temples...");
-        System.out.println("Collecting 3 Zen from");
-        System.out.println("Collecting 3 Zen from a");
-        System.out.println("Collecting " + money + " and " + zen + " Zen from a");
-        System.out.println("Done collecting from temples...");
-        System.out.println(" ");
+        
       }
     }
+    System.out.println("Collecting from all temples...");
+    System.out.println("Collecting " + money + " and " + zen + " Zen from a");
+    System.out.println("Done collecting from temples...");
+    System.out.println(" ");
     if(zen > 100){
       System.out.println("Congrats, you became a master monk in " + count + " turn.");
     }
