@@ -19,6 +19,7 @@ public class Game{
       System.out.println("Help Someone -10$, +5 Zen -> Press 2");
       System.out.println("Work at Company +$50, -30 Zen -> Press 3");
       System.out.println("Purchase Temple -> Press 4");
+      System.out.println("Write a book -> Press 5");
       System.out.println(" ");
       System.out.println("You have $" + money + " and " + zen + " points");
       Scanner bu = new Scanner(System.in);
@@ -64,7 +65,10 @@ public class Game{
         }
       }
       if(budd == 5){
-        System.out.println("");
+        int money5 = 7;
+        int zen5 = 5;
+        money = money + money5;
+        zen = zen + zen5;
       }
     }
     System.out.println("Collecting from all temples...");
