@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class Game{
+
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     System.out.println("What is your name?");
@@ -11,6 +12,7 @@ public class Game{
     int zen = 0;
     int count = 0;
     int budd;
+    
     while(zen < 100) {
       count ++ ;
       System.out.println(" ");
