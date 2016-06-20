@@ -24,22 +24,26 @@ public class Game{
       System.out.println("You have $" + money + " and " + zen + " points");
       Scanner bu = new Scanner(System.in);
       budd = bu.nextInt();
+      
       if(budd == 1){
         int zen1 = 1;
         zen = zen + zen1;
       }
+      
       if(budd == 2){
         int money2 = -10;
         int zen2 = 5;
         money = money + money2;
         zen = zen + zen2;
       }
+      
       if(budd == 3){
         int money3 = +50;
         int zen3 = -30;
         money = money + money3;
         zen = zen + zen3;
       }
+      
       if(budd == 4){
         System.out.println("What do you want to call your temple?");
         Scanner gb = new Scanner(System.in);
@@ -64,6 +68,7 @@ public class Game{
           zen = zen + zen4_small;
         }
       }
+      
       if(budd == 5){
         int money5 = 7;
         int zen5 = 5;
@@ -71,13 +76,16 @@ public class Game{
         zen = zen + zen5;
       }
     }
+    
     System.out.println("Collecting from all temples...");
     System.out.println("Collecting " + money + " and " + zen + " Zen from a");
     System.out.println("Done collecting from temples...");
     System.out.println(" ");
+    
     if(zen > 100){
       System.out.println("Congrats, you became a master monk in " + count + " turn.");
     }
+    
     if(money < 0){
       System.out.println("You ran out of money before becoming a master in " + count + " turns");
       System.out.println("Your final rank was : newcomer");
